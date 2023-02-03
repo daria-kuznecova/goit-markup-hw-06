@@ -463,21 +463,37 @@
           <use href="./images/icons.svg#icon-Vector"></use>
         </svg>
         </button>
+
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+
         
+        <form class="modal-form">
+
+          <label class="label-name-user common-label" for="name-user">Name</label>
+          <input class="input-name-user common-input" type="text" id="name-user"/>
+           
+          <label class="label-tel-user common-label" for="tel-user">Phone</label>
+          <input class="input-tel-user common-input" type="tel" id="tel-user">
+
+          <label class="label-email-user common-label" for="email-user">Email</label>
+          <input class="email-user common-input" type="email" id="email-user">
+
+          <label class="label-comment-user common-label" for="comment-user">Comment</label>
+          <textarea class="modal-comment common-input" name="" id="comment-user" placeholder="Text input"></textarea>
+
+          <div class="ckeckbox-policy">
+          <input class="input-check hidden" type="checkbox" id="policy" name="policy" value="">
+          <label class="label-check-text" for="policy">
+            <span class="new-checkbox">
+              <svg width="10" height="8">
+                <use href="./images/icons.svg#icon-checkbox"></use>
+              </svg>
+            </span>
+            I accept the terms and conditions of the <a href="#"><span class="">Privacy Policy</a></span></label>
+          </div>
+
+          <button class="btn-send" type="submit">Send</button>
         
-         <form class="modal-form">
-
-          <p class="modal-title">Leave your contacts and we will call you back</p>
-
-          <label class="label-name-user" for="name-user"></label>
-          <input class="input-name-user" type="text" id="name-user"/>
-
-          <input class="tel-user" type="tel">
-
-          <input class="email-user" type="email">
-
-
-
         </form>
       </div>
     </div>
