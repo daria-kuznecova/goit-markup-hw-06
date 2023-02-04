@@ -947,7 +947,7 @@ body {
   fill: transparent;
 }
 
-.input-check:checked + .label-check-text .new-checkbox,
+.input-check:focus + .label-check-text .new-checkbox,
 .input-check:checked + .label-check-text .new-checkbox {
   fill: #ffffff;
   background-color: var(--accent-color);
