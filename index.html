@@ -466,17 +466,33 @@
 
         <p class="modal-title">Leave your contacts and we will call you back</p>
 
-        
         <form class="modal-form">
 
           <label class="label-name-user common-label" for="name-user">Name</label>
-          <input class="input-name-user common-input" type="text" id="name-user"/>
+          <div class="block-input-name block-input">
+            <input class="input-name-user common-input" type="text" id="name-user"/>
+            <svg class="input-name-icon" width="12" height="12">
+              <use href="./images/icons.svg#icon-modal-name"></use>
+            </svg>
+          </div>
            
           <label class="label-tel-user common-label" for="tel-user">Phone</label>
-          <input class="input-tel-user common-input" type="tel" id="tel-user">
-
+          <div class="block-input-tel block-input"> 
+            <input class="input-tel-user common-input" type="tel" id="tel-user">
+            <svg class="input-tel-icon" width="13" height="13">
+              <use href="./images/icons.svg#icon-modal-tel"></use>
+            </svg>
+          </div> 
+      
           <label class="label-email-user common-label" for="email-user">Email</label>
-          <input class="email-user common-input" type="email" id="email-user">
+          <div class="block-input-email block-input">
+            <input class="input-email-user common-input" type="email" id="email-user">
+            <svg class="input-email-icon" width="15" height="12">
+              <use href="./images/icons.svg#icon-modal-email"></use>
+            </svg>
+          </div>
+
+
 
           <label class="label-comment-user common-label" for="comment-user">Comment</label>
           <textarea class="modal-comment common-input" name="" id="comment-user" placeholder="Text input"></textarea>
@@ -489,7 +505,9 @@
                 <use href="./images/icons.svg#icon-checkbox"></use>
               </svg>
             </span>
-            I accept the terms and conditions of the <a href="#"><span class="">Privacy Policy</a></span></label>
+            I accept the terms and conditions of the &nbsp
+            <a class="modal-link-policy" href="#"><span class="">Privacy Policy</span></a>
+          </label>
           </div>
 
           <button class="btn-send" type="submit">Send</button>

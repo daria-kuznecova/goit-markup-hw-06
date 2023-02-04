@@ -220,6 +220,7 @@ body {
   border-radius: 4px;
   border: 1px solid transparent;
   cursor: pointer;
+  outline: none;
 }
 
 .hero-btn:hover,
@@ -616,6 +617,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   transition: background-color var(--transition-duration) var(--cubic-bezier);
+  outline: none;
 }
 
 .footer-social-link:hover,
@@ -623,7 +625,7 @@ body {
   background-color: #31d0aa;
 }
 
-/*Блок подписка*/
+/*Блок подписка в футере*/
 
 .block-subscribe {
   margin-left: 80px;
@@ -661,10 +663,13 @@ body {
   background-color: var(--main-background-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+  outline: none;
+  transition: border-color var(--transition-duration) var(--cubic-bezier);
 }
 
-.input-email-subscripe:hover {
-  border: 1px solid #404bbf;
+.input-email-subscripe:hover,
+.input-email-subscripe:focus {
+  border-color: #404bbf;
 }
 
 .button-email-subscribe {
@@ -683,14 +688,15 @@ body {
   border: 1px solid transparent;
   border-radius: 4px;
   cursor: pointer;
+  outline: none;
+  transition: background-color var(--transition-duration) var(--cubic-bezier),
+    box-shadow var(--transition-duration) var(--cubic-bezier);
 }
 
 .button-email-subscribe:hover,
 .button-email-subscribe:focus {
   background-color: #404bbf;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: 1px solid transparent;
-  border-radius: 4px;
 }
 
 /*Модальное окно*/
@@ -717,7 +723,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scaleY(1);
   width: 408px;
-  height: 576px;
+  height: 584px;
 
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -765,7 +771,7 @@ body {
 
 .modal-title {
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   font-weight: 500;
 }
 
@@ -780,10 +786,92 @@ body {
 }
 
 .common-label {
+  display: block;
+  margin-bottom: 4px;
+
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.04em;
   color: #8e8f99;
+}
+
+.block-input-name {
+  position: relative;
+}
+
+.input-name-user {
+  transition: border-color var(--transition-duration) var(--cubic-bezier);
+}
+
+.input-name-icon {
+  position: absolute;
+  top: 50%;
+  left: 19px;
+  transform: translateY(-50%);
+
+  fill: var(--main-background-color);
+  transition: fill var(--transition-duration) var(--cubic-bezier);
+}
+
+.input-name-user:hover,
+.input-name-user:focus,
+.input-name-user:hover + .input-name-icon,
+.input-name-user:focus + .input-name-icon {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.block-input-tel {
+  display: block;
+  position: relative;
+}
+
+.input-tel-user {
+  transition: border-color var(--transition-duration) var(--cubic-bezier);
+}
+
+.input-tel-icon {
+  position: absolute;
+  top: 50%;
+  left: 19px;
+  transform: translateY(-50%);
+
+  fill: var(--main-background-color);
+  transition: fill var(--transition-duration) var(--cubic-bezier);
+}
+
+.input-tel-user:hover,
+.input-tel-user:focus,
+.input-tel-user:hover + .input-tel-icon,
+.input-tel-user:focus + .input-tel-icon {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.block-input-email {
+  position: relative;
+}
+
+.input-email-user {
+  transition: border-color var(--transition-duration) var(--cubic-bezier);
+}
+
+.input-email-icon {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+
+  fill: var(--main-background-color);
+  transition: fill var(--transition-duration) var(--cubic-bezier);
+}
+
+.input-email-user:hover,
+.input-email-user:focus,
+.input-email-user:hover + .input-email-icon,
+.input-email-user:focus + .input-email-icon {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .common-input {
@@ -792,9 +880,10 @@ body {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
 }
 
-.common-inputnot:not(:last-child) {
+.block-input:not(:last-child) {
   margin-bottom: 8px;
 }
 
@@ -803,6 +892,8 @@ body {
   width: 360px;
   height: 120px;
   resize: none;
+
+  transition: border-color var(--transition-duration) var(--cubic-bezier);
 }
 
 .modal-comment::placeholder {
@@ -811,6 +902,13 @@ body {
   letter-spacing: 0.04em;
   color: rgba(117, 117, 117, 0.5);
 }
+
+.modal-comment:hover,
+.modal-comment:focus {
+  border-color: var(--accent-color);
+}
+
+/*Кастомный чекбокс в модальном окне*/
 
 .ckeckbox-policy {
   display: flex;
@@ -827,7 +925,7 @@ body {
 }
 
 .label-check-text {
-  display: block;
+  display: flex;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.04em;
@@ -846,6 +944,14 @@ body {
 
   border: 1.25px solid #2e2f42;
   border-radius: 2px;
+  fill: transparent;
+}
+
+.input-check:checked + .label-check-text .new-checkbox,
+.input-check:checked + .label-check-text .new-checkbox {
+  fill: #ffffff;
+  background-color: var(--accent-color);
+  border: none;
 }
 
 .btn-send {
@@ -865,11 +971,12 @@ body {
   border-radius: 4px;
   border: 1px solid transparent;
   cursor: pointer;
+  transition: background-color var(--transition-duration) var(--cubic-bezier),
+    box-shadow var(--transition-duration) var(--cubic-bezier);
 }
 
 .btn-send:hover,
 .btn-send:focus {
-  background: #404bbf;
+  background-color: #404bbf;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
 }
