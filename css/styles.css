@@ -942,11 +942,12 @@ body {
 }
 
 .modal-check:focus + .check-text::before {
-  background-color: #404bbf;
+  outline: auto;
+  /* background-color: #404bbf;
   border: none;
   background-image: url(../images/check.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
 }
 
 /*Кнопка*/
