@@ -911,22 +911,11 @@ body {
 
 /*Кастомный чекбокс в модальном окне*/
 
-.ckeckbox-policy {
+.check-text {
   display: flex;
-  flex-direction: row;
   margin-top: 16px;
   margin-bottom: 24px;
-  gap: 8px;
-}
 
-.input-check.hidden {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.label-check-text {
-  display: flex;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.04em;
@@ -934,26 +923,33 @@ body {
   color: #757575;
 }
 
-.label-check-text .new-checkbox {
+.check-text:before {
+  content: "";
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 8px;
-
   width: 16px;
   height: 16px;
-
   border: 1.25px solid #2e2f42;
   border-radius: 2px;
-  fill: transparent;
+  margin-right: 8px;
 }
 
-.input-check:focus + .label-check-text .new-checkbox,
-.input-check:checked + .label-check-text .new-checkbox {
-  fill: #ffffff;
-  background-color: var(--accent-color);
+.modal-check:checked + .check-text:before {
+  background-color: #404bbf;
   border: none;
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+.modal-check:focus + .check-text:before {
+  background-color: #404bbf;
+  border: none;
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*Кнопка*/
 
 .btn-send {
   display: flex;
@@ -974,6 +970,7 @@ body {
   cursor: pointer;
   transition: background-color var(--transition-duration) var(--cubic-bezier),
     box-shadow var(--transition-duration) var(--cubic-bezier);
+  outline: none;
 }
 
 .btn-send:hover,
