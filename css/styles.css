@@ -923,7 +923,7 @@ body {
   color: #757575;
 }
 
-.check-text:before {
+.check-text::before {
   content: "";
   display: flex;
   width: 16px;
@@ -933,7 +933,7 @@ body {
   margin-right: 8px;
 }
 
-.modal-check:checked + .check-text:before {
+.modal-check:checked + .check-text::before {
   background-color: #404bbf;
   border: none;
   background-image: url(../images/check.svg);
@@ -941,7 +941,7 @@ body {
   background-position: center;
 }
 
-.modal-check:focus + .check-text:before {
+.modal-check:focus + .check-text::before {
   background-color: #404bbf;
   border: none;
   background-image: url(../images/check.svg);
